@@ -1,0 +1,22 @@
+
+ armACF = CFrame.new()
+
+ armBCF = CFrame.new()
+
+ armCCF = CFrame.new()
+
+ armDCF = CFrame.new()
+
+ headCF = CFrame.new()
+
+ legACF = CFrame.new()
+
+ legBCF = CFrame.new()
+
+ torsoCF = CFrame.new()
+
+ hatR = 1
+
+ skinR = 1
+
+ mapR = 'hub'
