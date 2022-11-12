@@ -105,7 +105,6 @@ rs.RenderStepped:Connect(function()
 end)
 
 while wait(1) do
-    bat:destroy()
     bat = game.ReplicatedFirst.battery:Clone()
     bat.Transparency = 1
     bat.Parent = workspace
