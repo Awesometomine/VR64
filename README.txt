@@ -1,6 +1,12 @@
 kinda rushed but hey it works
+before using this you should know 3 key things:
 
+1. this does not allow you to use core r64 mechanics while in vr e.g. diving, double jumping won't work.
+All this does is tracks your vr movements and sends it to the r64 clients which sends it to the server (plus the other features)
 
+2. the information between the 2 clients is sent through txt files which are written and read by each client
+
+3. the client in r64 should use maximum render quality so that the other player models are captured smoothly
 
 GUIDE:
 1. move the VR64 folder into your synapse workspace folder
