@@ -9,7 +9,7 @@ GUIDE:
 vr64 = https://www.roblox.com/games/11517311012/R64-VR64 
 r64 = https://www.roblox.com/games/1111083356/Robot-64
 4. have your vr player join vr64
-5. change currentPlayer.txt to the player vr username e.g. TrackingPlayer = "awsometomine"
+5. change currentPlayer.txt to the vr players username e.g. TrackingPlayer = "awsometomine"
 6. execute "Record.lua" as the client in vr64 game
 7. execute "Playback.lua" as the client in r64 game
 8. your player in vr should now be able to interact with other players while in vr
