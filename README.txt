@@ -29,5 +29,5 @@ player list
 loadmap list
 cosmetic gui
 
-thanks to emk530 for setting up Nexus Vr and the beebo rig
+Thanks to EmK530 for setting up Nexus Vr and the beebo rig
 https://github.com/EmK530
