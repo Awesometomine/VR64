@@ -25,25 +25,8 @@
 	oldlist = {}
 	chatted = "message = ''"
 	
-	framecount = 0
 	firststring = ""
 	status = "NEUTRAL"
-
-    uis = game:GetService("UserInputService")
-    uis.InputBegan:Connect(function(input, Typing)
-        if Typing then return end
-		if input.KeyCode == Enum.KeyCode.R then
-			if status == "RECORD" then
-			    status = "NEUTRAL"
-			    print("Stopped recording")
-			    framecount = 0
-			elseif status == "NEUTRAL" then
-			    status = "RECORD"
-			    print("Started recording")
-			    framecount = 0
-			end
-		end
-	end)
 
     chat = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering
     chat.OnClientEvent:Connect(function(arg1, arg2)
@@ -55,7 +38,6 @@
 
 	rs = game:GetService("RunService")
 	rs.RenderStepped:Connect(function()
-		if status == "RECORD" then
 		    dummy = game:GetService("Workspace"):WaitForChild(TrackingPlayer)
 		    loadstring(readfile("VR64/OtherChat.txt"))()
 		    loadstring(readfile("VR64/replay.txt"))()
@@ -69,8 +51,6 @@
 		    if usermessage ~= "" then
             game:GetService("Workspace").Share.Chat:FireServer(tostring('['..messageuser..']: '.. usermessage))
 		    end
-		    
-		    framecount = framecount + 1
 		    hat = "\n hatR = " ..tostring(game:GetService("Players").LocalPlayer.PlayerGui.vr64.HatValue.Text)
 		    skin = "\n skinR = " ..tostring(game:GetService("Players").LocalPlayer.PlayerGui.vr64.SkinValue.Text)
 		    map = "\n mapR = '" ..tostring(game:GetService("Players").LocalPlayer.PlayerGui.vr64.MapValue.Text).. "'"
@@ -95,6 +75,5 @@
 		        game:GetService("Workspace").Share.List:FireServer(fakeTable)
 		    end
 		    oldlist = fakeTable
-		end
 	end)
 
